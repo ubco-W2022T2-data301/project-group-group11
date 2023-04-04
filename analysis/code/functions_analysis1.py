@@ -8,7 +8,7 @@ def process(path_to_csv_file_1, path_to_csv_file_2):
         .rename(columns={'Adj Close': 'Adj_Close'})
         .assign(Date=pd.to_datetime(pd.read_csv(path_to_csv_file_1)['Date']))
         .assign(Change = lambda x: x['Close'] - x['Open'])
-        .assign(one_week_Difference = lambda x: x['Adj_Close'].shift(7).rolling(7).mean() - x['Adj_Close'].rolling(7).mean())
+        .assign(One_Week_Difference = lambda x: x['Adj_Close'].shift(7).rolling(7).mean() - x['Adj_Close'].rolling(7).mean())
         .loc[lambda x: x['Date'] >= pd.to_datetime('2000-01-01')]
         .drop(columns=['Close', 'Open', 'High', 'Low', 'Volume'])
     )

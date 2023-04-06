@@ -28,14 +28,18 @@ def process_data(df1_csv, df2_csv):
     )
     
     merged = pd.merge(AAPL_df, MSFT_df, on='Date', suffixes=('_AAPL', '_MSFT'))
-        
+
     return merged
                                                                         
 def compare_data(df):
+    df.index = pd.to_datetime(df.index)
+    growth = df['D30_pct_chg_AAPL'] - df['D30_pct_chg_MSFT']
+    AAPL_faster = (growth > 0).astype(int)
+    MSFT_faster = (growth < 0).astype(int)
+    
     growth_yearly = (
-        df.groupby(df['Date'].dt.year)
-        .apply(lambda x: (x['D30_pct_chg_AAPL'] < x['D30_pct_chg_MSFT']).sum())
-        .assign(MSFT_greater = lambda x: (x['D30_pct_chg_AAPL'] < x['D30_pct_chg_MSFT']).sum())
+        pd.DataFrame({'AAPL Faster': AAPL_faster, 'MSFT faster': MSFT_faster})
+        .groupby(pd.Grouper(freq='Y')).sum()
     )
         
     return growth_yearly

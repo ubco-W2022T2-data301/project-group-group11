@@ -1,6 +1,4 @@
-# Group 11 - {Short snappy Title of your project}
-
-- Your title can change over time.
+# Group 11 - A Deeper Look into Apple's Stock Value
 
 ## Milestones
 
@@ -16,15 +14,13 @@ Our data set includes the opening, closing, adjusted closing, high, and low mark
 
 ## Team Members
 
-- Person 1: one sentence about you!
+- Davis Franklin: I am a second year studying computer science, and I spend my time away from university in the summer working for the BCWS on the Vesta unit crew fighting wildfires.  
 - Person 2: one sentence about you!
-- Person 3: one sentence about you!
 
 ## Images
 
-{You should use this area to add a screenshot of an interesting plot, or of your dashboard}
+![image of dashboard 1](images/dashboard_1_screenshot.png)
 
-<img src ="images/test.png" width="100px">
 
 ## References
 

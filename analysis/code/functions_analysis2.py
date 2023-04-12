@@ -30,6 +30,11 @@ def process_data(df1_csv, df2_csv):
     merged = pd.merge(AAPL_df, MSFT_df, on='Date', suffixes=('_AAPL', '_MSFT'))
 
     return merged
+
+def reformat(df):
+    reformatted = pd.melt(df, id_vars=['Date'], value_vars=['D30_move_AAPL', 'D30_move_MSFT'], var_name='stock', value_name='price')
+    return reformatted
+    
                                                                         
 def compare_data(df):
     

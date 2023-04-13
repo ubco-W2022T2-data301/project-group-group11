@@ -64,3 +64,7 @@ After analyzing and visualizing the stock market data of AAPL and MSFT, I am abl
 ---
 
 ## Summary/ Conclusion
+
+After conducting this project, we have gained a deeper understanding of how stocks work through the exploration of Apple’s stock. From analysis number one we discovered that iPhones do not have a significant impact on Apple’s stock value. Also, the iPhone 1st Gen was the most successful iPhone and the iPhone 3G was the least successful iPhone for Apple regarding the drop in Apple’s stock value after their release. From this we able to learn how to analyze the release of a product’s impact on a company’s stock value. From analysis number two
+
+Overall, from this project we able to expand our data skills
